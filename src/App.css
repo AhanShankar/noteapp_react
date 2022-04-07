@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-color: gray;
+}
+#navbar {
+  height: 8vh;
+  background-color: rgb(61, 61, 61);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  color: white;
+}
+#navbar a {
+  text-decoration: none;
+  color: white;
+}
+#navbar * {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#banner {
+  grid-column: 1/4;
+  background-color: rgb(29, 29, 29);
+}
+#createbuttonsticky {
+  grid-column: 4 / end;
+}
+#addsection {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#addbutton {
+  background-color: darkgrey;
+}
+#notehistory {
+  max-height: 40%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.note {
+  height: 40vh;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  margin: 2% 10%;
+  text-align: left;
+  padding-left: 10%;
+  border-radius: 1%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.notetext {
+  height: 70%;
+  padding-top: 10%;
+  font-family: monospace;
+  font-size: large;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+.notetext::-webkit-scrollbar {
+  display: none;
+}
+.notetime {
+  padding-top: 10%;
+  height: 20%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  color: rgb(169, 169, 169);
+  font-size: smaller;
+  font-style: italic;
+  margin-top: auto;
+}
+#notedisplay {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 5vh;
+}
+#addbutton {
+  background-color: rgb(73, 73, 73);
+  padding: 1%;
+  border-radius: 1vw;
+  color: white;
+  cursor: pointer;
+  animation-duration:0.5s;
+}
+#addbutton:hover {
+  animation-name: scalebutton;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+
+}
+@keyframes scalebutton {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+#displayoptions
+{
+  display: flex;
+  justify-content: center;
+}
+#displayoptions *
+{
+  margin:1% 1% ;
+  border:none;
+  padding: 0.5vh 1vw;
+  border-radius: 1%;
+}
+#displayoptions *:focus
+{
+  outline: none;
+}
